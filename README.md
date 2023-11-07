@@ -1,6 +1,6 @@
 # Introduction
 
-This is a `MATLAB` project that is meant to compute the [Wavelet cross-correlation][1] between two physiological signals and generate apporpriate metrics extracted from [fNIRS][2] data (its application is **NOT** limited to fNIRS data). [This article][3] describes the complete methodology utilizing the *Wavelet Cross-correlation technique* to compute the neural synchronization between several Musicians and Listeners.
+This is a `MATLAB` project that is meant to compute the [Wavelet cross-correlation][1] between two physiological signals and generate appropriate metrics extracted from [fNIRS][2] data (its application is **NOT** limited to fNIRS data). [This article][3] describes the complete methodology utilizing the *Wavelet Cross-correlation technique* to compute the neural synchronization between several Musicians and Listeners and generate several relevant metrics for analysis.
 
 > While the project is geared towards analyzing fNIRS data, you can still utilize the same function to compute the cross-correlation as well extract metrics relevant to your own data. 
 
