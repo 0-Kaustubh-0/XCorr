@@ -1,41 +1,43 @@
 # Introduction
 
-This is a `MATLAB` project that is meant to compute the [Wavelet cross-correlation][1] between two physiological signals and generate apporpriate metrics extracted from the [fNIRS][2] data. [This article][3] describing the complete methodology of utilizing the *Wavelet Cross-correlation technique* to obtain   
+This is a `MATLAB` project that is meant to compute the [Wavelet cross-correlation][1] between two physiological signals and generate apporpriate metrics extracted from [fNIRS][2] data (its application is **NOT** limited to fNIRS data). [This article][3] describes the complete methodology utilizing the *Wavelet Cross-correlation technique* to compute the neural synchronization between several Musicians and Listeners.
 
-> While the project is geared towards analyzing fNIRS data, one can still utilize just the 
+> While the project is geared towards analyzing fNIRS data, you can still utilize the same function to compute the cross-correlation as well extract metrics relevant to your own data. 
 
 
 ## Dependencies
 
 This project works solely on `MATLAB` and requires the following toolboxes to be installed:
 
+* Signal Processing Toolbox
+* Wavelet toolbox
+* Economterics toolbox (for Granger-Causality test) 
 
 > If you are using the **Software OpenGL** rendering for `MATLAB`, then you'll need to utlize the [silent installation][4] process in order to install relevant packages.
 
 
 ## Usage
-Cross-correlation 1 stop shop
+
+While there is a function available for computing the Cross-correlation there are several other functions for utilizing this generated data to observe coehrence between multiple time-series.
 
 Avaialble functions: 
 
-```matlab
 * modifySignals()               - Trim and prepare the signals for X-correlation  
 * computeCWT()                  - Compute CWT with signal stacks
 * meanCoherence()               - Extract coherence metrics over bandwidth of interest
 * plotThis()                    - Create plots with options
-```
+* main.m - Main MATLAB function loading the data and calling all other functions
 
 
 #### Prepare the signals for X-correlation : modifySignals() 
 
-> NOTE : Signal stacks sig1, sig2 are returned as row vectors ***
 
-```matlab
     sig1,                       - Raw signal data stack/ singular
     sig2,                       - Raw signal data stack/ singular
     dsFactor,                   - (double) Downsampling factor
     trim                        - (double) Trimming length (signal should have same number of samples)
-```
+
+> NOTE : Signal stacks sig1, sig2 are returned as row vectors
 
 
 #### Set Options
